@@ -1,8 +1,9 @@
 #!/bin/bash
-if [[ $PWD == $HOME ]]; then
-    echo $PWD
-    exit 0
+CurrentPath="/home/user/lab1"
+if [[ "$PWD" == "$CurrentPath" ]]; then
+   echo "$CurrentPath"
+   exit 0
 else
-    echo "Not a home directory"
-    exit 1
+   echo "Incorrect path"
+   exit 1
 fi
